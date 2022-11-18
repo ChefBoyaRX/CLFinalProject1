@@ -19,14 +19,18 @@ namespace EncoderProjectCL.Plugins
             }
         }
 
-        public void Go(string allcaps)
+        public string Go(string allcaps)
         {
             string str1 = Console.ReadLine();
 
             string upperstr1 = str1.ToUpper();
 
-            Console.WriteLine(upperstr1);
+            return upperstr1;
         }
 
+        void IPlugin.Go(string parameters)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

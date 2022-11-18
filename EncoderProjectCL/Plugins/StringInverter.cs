@@ -19,7 +19,7 @@ namespace EncoderProjectCL.Plugins
             }
         }
 
-        public void Go(string backwards)
+        public string Go(string backwards)
         {
             string originalString = Console.ReadLine();
 
@@ -27,7 +27,12 @@ namespace EncoderProjectCL.Plugins
             Array.Reverse(stringArray);
             string reverseString = new string(stringArray);
 
-            Console.WriteLine($"Reverse String is : {reverseString} ");
-            Console.ReadLine();        }
+            return backwards;
+        }
+
+        void IPlugin.Go(string parameters)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
